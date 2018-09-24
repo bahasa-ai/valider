@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es2015",
+      "es2016.array.include"
+    ],
+    "noImplicitAny": false,
+    "removeComments": true,
+    "declaration": true,
+    "baseUrl": "./src",
+    "outDir": "./lib",
+    "strict": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
