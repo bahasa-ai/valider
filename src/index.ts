@@ -32,14 +32,9 @@ export interface ValidationResult {
 }
 
 export default class Validator {
-  private static _rules: ValidationRule
+  constructor() {}
 
-  public static setRule(rules: ValidationRule) {
-    this._rules = rules
-    return this
-  }
-
-  private static isEmpty(obj) {
+  private isEmpty(obj: object) {
     for (const prop in obj) {
       if (obj.hasOwnProperty(prop)) {
         return false
@@ -48,7 +43,7 @@ export default class Validator {
     return JSON.stringify(obj) === JSON.stringify({})
   }
 
-  private static async _validate(rule: ValidationFieldRule, input: any, inputName: string): Promise<any> {
+  private async _validate(rule: ValidationFieldRule, input: any, inputName: string): Promise<any> {
     const inputData = input[inputName]
 
     if (rule.hasOwnProperty('required')) {
@@ -133,7 +128,7 @@ export default class Validator {
     }
   }
 
-  public static async validateWithRule(rule: ValidationRule, input: { [inputName: string]: any }): Promise<ValidationResult> {
+  public async validateWithRule(rule: ValidationRule, input: { [inputName: string]: any }): Promise<ValidationResult> {
     const error = {}
 
     await Object.keys(rule).reduce(async (p: Promise<any>, inputName) => {
@@ -147,7 +142,7 @@ export default class Validator {
     }, Promise.resolve())
 
     return {
-      isValid: Validator.isEmpty(error),
+      isValid: this.isEmpty(error),
       error
     }
   }

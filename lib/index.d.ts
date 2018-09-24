@@ -24,11 +24,10 @@ export interface ValidationResult {
     };
 }
 export default class Validator {
-    private static _rules;
-    static setRule(rules: ValidationRule): typeof Validator;
-    private static isEmpty;
-    private static _validate;
-    static validateWithRule(rule: ValidationRule, input: {
+    constructor();
+    private isEmpty;
+    private _validate;
+    validateWithRule(rule: ValidationRule, input: {
         [inputName: string]: any;
     }): Promise<ValidationResult>;
 }
