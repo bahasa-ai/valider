@@ -7,12 +7,13 @@
       "es2016.array.include"
     ],
     "noImplicitAny": false,
+    "moduleResolution": "node",
     "removeComments": true,
     "declaration": true,
-    "baseUrl": "./src",
-    "outDir": "./lib",
+    "baseUrl": ".",
+    "outDir": ".",
     "strict": true
   },
-  "include": ["src"],
+  "include": ["src", "index.ts"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }

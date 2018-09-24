@@ -25,8 +25,6 @@ export interface ValidationResult {
 }
 export default class Validator {
     constructor();
-    private isEmpty;
-    private _validate;
     validateWithRule(rule: ValidationRule, input: {
         [inputName: string]: any;
     }): Promise<ValidationResult>;
