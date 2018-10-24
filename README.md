@@ -31,7 +31,7 @@ const data = {
   owner: 'Laras'
 }
 
-const Validator = new valider()
+const Validator = new Valider()
 
 validator.validateWithRule({
   catName: {
