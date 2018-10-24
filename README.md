@@ -19,7 +19,7 @@ SOON
 
 First, import the library to your code:
 
-`import Valider, {TYPE_VALIDATION} from valider`
+`import Valider, {TYPE_VALIDATION} from 'valider'`
 
 Then,
 
