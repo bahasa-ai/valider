@@ -10,10 +10,11 @@
     "moduleResolution": "node",
     "removeComments": true,
     "declaration": true,
-    "baseUrl": ".",
-    "outDir": ".",
+    "experimentalDecorators": true,
+    "baseUrl": "src",
+    "outDir": "dist",
     "strict": true
   },
-  "include": ["src", "index.ts"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*", "dist"]
 }
