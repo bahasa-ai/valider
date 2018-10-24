@@ -1,8 +1,8 @@
 {
   "name": "valider",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript object validator",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build.dev": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/tslint -c tslint.json -p tsconfig.json && ./node_modules/.bin/tsc -w",
@@ -19,6 +19,9 @@
     "valider"
   ],
   "author": "Jundi Alwan <jundi@bahasa.ai> (bahasa.ai)",
+  "contributors": [
+    "Fathur Rachman W <fathur@bahasa.ai> (bahasa.ai)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bahasa-ai/valider/issues"
